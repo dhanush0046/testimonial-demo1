@@ -19,9 +19,10 @@ model Space {
   headerTitle   String
   customMessage String
   questions     String[]
-  createdAt     DateTime   @default(now())
   shareableLink String?
   testimonials  Testimonial[]
+  createdAt     DateTime   @default(now())
+
 }
 
 model Testimonial {

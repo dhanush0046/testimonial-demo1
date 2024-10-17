@@ -72,9 +72,10 @@
 
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import prisma from '../../lib/prisma';
+import { PrismaClient } from '@prisma/client';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const prisma = new PrismaClient();
   if (req.method === 'POST') {
     const { spaceName, headerTitle, customMessage, questions } = req.body;
 
