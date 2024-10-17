@@ -416,7 +416,7 @@ export default function TestimonialSubmissionPage() {
       setTimeout(() => {
         mediaRecorder.stop();
         stream.getTracks().forEach(track => track.stop());
-      }, 60000); // Stop recording after 60 seconds
+      }, 30000); // Stop recording after 60 seconds
     } catch (error) {
       console.error('Error recording video:', error);
       alert('Failed to start video recording. Please check your camera permissions.');
