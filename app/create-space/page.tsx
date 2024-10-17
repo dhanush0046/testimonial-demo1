@@ -101,11 +101,10 @@ export default function CreateSpacePage() {
     setIsCreating(true);
     try {
       const newSpace: Space = await createSpace(previewData);
-      if (newSpace && newSpace.id) {
-        const link = `/submit-testimonial/${newSpace.id}`;
-        setShareableLink(`${window.location.origin}${link}`);
+      if (newSpace && newSpace.id && newSpace.shareableLink) {
+        setShareableLink(`${window.location.origin}${newSpace.shareableLink}`);
       } else {
-        throw new Error('Failed to get space ID');
+        throw new Error('Failed to get space ID or shareable link');
       }
     } catch (error) {
       console.error('Error creating space:', error);

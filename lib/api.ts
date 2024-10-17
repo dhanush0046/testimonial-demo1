@@ -16,7 +16,7 @@ export async function createSpace(input: CreateSpaceInput): Promise<Space> {
   }
 
   const data = await response.json();
-  if (!data.newSpace || !data.newSpace.id) {
+  if (!data.newSpace || !data.newSpace.id || !data.newSpace.shareableLink) {
     throw new Error('Invalid response from server');
   }
 
