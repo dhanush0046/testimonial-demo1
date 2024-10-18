@@ -49,20 +49,21 @@ export async function createTestimonial(input: CreateTestimonialInput): Promise<
   return response.json();
 }
 
-export async function createVideoTestimonial(spaceId: string, videoBlob: Blob): Promise<Testimonial> {
-  const formData = new FormData();
-  formData.append('spaceId', spaceId);
-  formData.append('type', 'video');
-  formData.append('video', videoBlob, 'testimonial.webm');
+// export async function createVideoTestimonial(spaceId: string, videoBlob: Blob): Promise<Testimonial> {
+//   const formData = new FormData();
+//   formData.append('spaceId', spaceId);
+//   formData.append('type', 'video');
+//   formData.append('video', videoBlob, 'testimonial.webm');
 
-  const response = await fetch('/api/testimonials', {
-    method: 'POST',
-    body: formData,
-  });
+//   const response = await fetch('/api/testimonials', {
+//     method: 'POST',
+//     body: formData,
+//   });
 
-  if (!response.ok) {
-    throw new Error('Failed to create video testimonial');
-  }
+//   if (!response.ok) {
+//     throw new Error('Failed to create video testimonial');
+//   }
 
-  return response.json();
-}
+//   return response.json();
+// }
+
