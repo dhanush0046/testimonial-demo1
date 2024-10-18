@@ -11,7 +11,7 @@ const VideoUploader: React.FC<{ spaceId: string }> = ({ spaceId }) => {
 
     const startRecording = async () => {
         try {
-            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
             if (videoRef.current) {
                 videoRef.current.srcObject = stream;
             }
@@ -21,7 +21,7 @@ const VideoUploader: React.FC<{ spaceId: string }> = ({ spaceId }) => {
             setMediaRecorder(recorder);
             setRecording(true);
         } catch (err) {
-            console.error('Error accessing camera: ', err);
+            console.error('Error accessing camera or microphone: ', err);
         }
     };
 
