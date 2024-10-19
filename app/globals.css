@@ -78,3 +78,9 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+.sonner-toast {
+  width: 400px !important;   /* Customize the width */
+  padding: 20px !important;  /* Customize the padding */
+  font-size: 16px !important; /* Customize font size if needed */
+}

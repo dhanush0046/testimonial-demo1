@@ -1,6 +1,6 @@
 // pages/api/spaces/[spaceId].ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import prisma from '../../../lib/prisma';
+import prisma from '@/lib/prisma';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { spaceId } = req.query;

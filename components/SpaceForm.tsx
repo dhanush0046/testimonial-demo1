@@ -91,7 +91,7 @@
 
 // components/SpaceForm.tsx
 import React, { useState } from 'react';
-import { CreateSpaceInput } from '../types/space';
+import { CreateSpaceInput } from '@/types/space';
 
 interface SpaceFormProps {
   onPreviewChange: (data: CreateSpaceInput) => void;

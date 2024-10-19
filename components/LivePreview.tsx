@@ -74,7 +74,7 @@
 //---------down --- update  design ----------
 
 import React from 'react';
-import { CreateSpaceInput } from '../types/space';
+import { CreateSpaceInput } from '@/types/space';
 
 interface LivePreviewProps {
   previewData: CreateSpaceInput;

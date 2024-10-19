@@ -77,11 +77,11 @@
 // app/create-space/page.tsx
 "use client";
 import React, { useState } from 'react';
-import Header from '../../components/Header';
-import SpaceForm from '../../components/SpaceForm';
-import LivePreview from '../../components/LivePreview';
-import { CreateSpaceInput, Space } from '../../types/space';
-import { createSpace } from '../../lib/api';
+import Header from '@/components/Header';
+import SpaceForm from '@/components/SpaceForm';
+import LivePreview from '@/components/LivePreview';
+import { CreateSpaceInput, Space } from '@/types/space';
+import { createSpace } from '@/lib/api';
 
 export default function CreateSpacePage() {
   const [previewData, setPreviewData] = useState<CreateSpaceInput>({

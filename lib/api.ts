@@ -1,6 +1,6 @@
 //lib/api.ts
-import { CreateSpaceInput, Space } from '../types/space';
-import { CreateTestimonialInput, Testimonial } from '../types/testimonial';
+import { CreateSpaceInput, Space } from '@/types/space';
+import { CreateTestimonialInput, Testimonial } from '@/types/testimonial';
 
 export async function createSpace(input: CreateSpaceInput): Promise<Space> {
   const response = await fetch('/api/spaces', {
